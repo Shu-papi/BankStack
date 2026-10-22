@@ -328,8 +328,7 @@ table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;
 <form class="card login" method="post"><h2>Sign in</h2>
 <label>Account number or username</label><input name="id" required autofocus>
 <label>PIN</label><input name="pin" type="password" maxlength="4" inputmode="numeric" required>
-<button>Sign in</button>
-<p style="font-size:.85rem;color:#5d6f69">Demo admin: <b>admin</b> / PIN <b>2468</b></p></form>{% endblock %}""",
+<button>Sign in</button></form>{% endblock %}""",
 
 "pin.html": """{% extends 'base.html' %}{% block body %}
 <form class="card login" method="post"><h2>{{ 'Set your own PIN' if forced else 'Change PIN' }}</h2>
