@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bankstack
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT bank:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/bankstack.db
+    disk:
+      name: bankstack-data
+      mountPath: /var/data
+      sizeGB: 1
